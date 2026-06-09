@@ -26,6 +26,13 @@ import datetime
 import hashlib
 import json
 import os
+import re
+
+
+def natural_key(name: str) -> int:
+    """Sort by the leading number in the filename (0-daftar-isi -> 0, 1 -> 1, ...)."""
+    m = re.match(r"(\d+)", os.path.basename(name))
+    return int(m.group(1)) if m else 10**9
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CONTENT_DIR = "jihati"
@@ -43,7 +50,7 @@ def sha256_of(path: str) -> str:
 def collect_files() -> list:
     base = os.path.join(ROOT, CONTENT_DIR)
     items = []
-    for name in sorted(os.listdir(base)):
+    for name in sorted(os.listdir(base), key=natural_key):
         if not name.endswith(".json"):
             continue
         if "copy" in name.lower():  # skip drafts
@@ -54,7 +61,7 @@ def collect_files() -> list:
             "sha256": sha256_of(full),
             "bytes": os.path.getsize(full),
         })
-    items.sort(key=lambda x: x["path"])
+    items.sort(key=lambda x: natural_key(x["path"]))
     return items
 
 
