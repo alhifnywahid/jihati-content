@@ -93,7 +93,7 @@ def main():
 
     version = args.version if args.version is not None else current_version() + 1
     base_url = args.base_url or prev_base or \
-        "https://cdn.jsdelivr.net/gh/USERNAME/jihati-content@content-v1/"
+        "https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v1/"
 
     files = collect_files()
     manifest = {

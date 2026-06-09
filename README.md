@@ -61,9 +61,9 @@ Berkas indeks yang dibaca aplikasi pertama kali untuk menentukan apakah ada pemb
 
 ```json
 {
-  "contentVersion": 1,
-  "generatedAt": "2026-06-08T23:51:15",
-  "baseUrl": "https://cdn.jsdelivr.net/gh/USERNAME/jihati-content@content-v1/",
+  "contentVersion": 2,
+  "generatedAt": "2026-06-09T11:45:47",
+  "baseUrl": "https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v2/",
   "fileCount": 65,
   "files": [{ "path": "jihati/1.json", "sha256": "10adfb…", "bytes": 2150 }]
 }
@@ -73,7 +73,7 @@ Berkas indeks yang dibaca aplikasi pertama kali untuk menentukan apakah ada pemb
 | ---------------- | ------ | -------------------------------------------------------------------- |
 | `contentVersion` | int    | Nomor versi konten. Dinaikkan setiap ada perubahan.                  |
 | `generatedAt`    | string | Waktu manifest dibuat (ISO 8601).                                    |
-| `baseUrl`        | string | Prefix URL CDN untuk mengunduh file.                                 |
+| `baseUrl`        | string | Prefix URL CDN (tag immutable `@content-vN/`) untuk mengunduh file.  |
 | `fileCount`      | int    | Jumlah file dalam manifest.                                          |
 | `files[].path`   | string | Path file relatif terhadap `baseUrl`.                                |
 | `files[].sha256` | string | Hash SHA-256 isi file → dipakai mendeteksi perubahan (delta update). |
@@ -142,69 +142,90 @@ Bentuk `content` ditentukan oleh `schema.type` (lihat tabel di bawah).
 
 ## Akses via CDN (jsDelivr)
 
-File di repo publik ini otomatis dapat diakses melalui jsDelivr:
+File di repo publik ini otomatis dapat diakses melalui jsDelivr. **Ada dua jenis alamat dengan peran berbeda:**
+
+### 1. Manifest — dibaca dari alamat TETAP `@master`
+
+Aplikasi selalu membaca manifest dari branch `master` (alamat tidak berubah), supaya **versi baru bisa ditemukan otomatis tanpa rilis ulang aplikasi**:
 
 ```
-https://cdn.jsdelivr.net/gh/USERNAME/jihati-content@<versi>/manifest.json
-https://cdn.jsdelivr.net/gh/USERNAME/jihati-content@<versi>/jihati/26.json
+https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@master/manifest.json
 ```
 
-`<versi>` sebaiknya berupa **tag rilis** (mis. `content-v2`) atau **commit hash** agar:
+### 2. File konten — disajikan dari TAG immutable
 
-- isi **permanen** (immutable) dan **selalu fresh** (di-cache aman), dan
-- pembaruan terkontrol per rilis.
+`baseUrl` di dalam `manifest.json` menunjuk ke **tag rilis** (mis. `content-v2`). Semua file konten diunduh dari sana sehingga **permanen (immutable) & cache aman**:
 
-Hindari `@latest`/`@main` untuk file konten karena di-cache ~12 jam.
+```
+https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v2/jihati/26.json
+```
+
+> **Inti pola ini:** _alamat manifest tetap_ (agar versi baru terdeteksi) + _file konten bertag_ (agar integritas & cache aman). Jangan pernah men-pin alamat manifest yang dibaca aplikasi ke tag — kalau di-pin ke tag, aplikasi tidak akan pernah tahu ada versi baru.
+>
+> Karena `@master` di-cache jsDelivr ±12 jam, **purge** alamat manifest setiap rilis (lihat tutorial) agar pembaruan langsung terbaca.
 
 ---
 
 ## Cara Memperbarui Konten (Tutorial)
 
-Contoh: memperbaiki harakat pada Surat Al-Mulk (`jihati/26.json`).
+Contoh: memperbaiki harakat pada Surat Al-Mulk (`jihati/26.json`), dirilis sebagai `content-v3`.
+
+> Cara tercepat: jalankan skrip `release.ps1` (lihat bagian bawah) yang merangkum semua langkah ini menjadi satu perintah. Di bawah ini langkah manualnya.
 
 1. **Edit file** konten terkait, mis. `jihati/26.json`. (Atau ubah `published` di `jihati/0-daftar-isi.json` untuk menampilkan/menyembunyikan entri.)
-2. **Regenerasi manifest** otomatis (hash & ukuran dihitung ulang, `contentVersion` naik):
+2. **Regenerasi manifest** dengan versi baru **dan** `baseUrl` ke tag yang akan dibuat:
    ```bash
-   python generate_manifest.py
+   python generate_manifest.py --version 3 --base-url "https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v3/"
    ```
-   atau set versi & baseUrl secara eksplisit:
-   ```bash
-   python generate_manifest.py --version 2 --base-url "https://cdn.jsdelivr.net/gh/USERNAME/jihati-content@content-v2/"
-   ```
-3. **Commit** perubahan:
+3. **Commit & push ke `main`** (di sinilah manifest yang dibaca aplikasi diperbarui):
    ```bash
    git add .
-   git commit -m "fix(26): koreksi harakat Surat Al-Mulk"
+   git commit -m "content: rilis v3 (koreksi harakat Surat Al-Mulk)"
+   git push origin main
    ```
-4. **Buat tag/rilis** baru:
+4. **Buat & push tag immutable** `content-v3` (snapshot file untuk diunduh aplikasi):
    ```bash
-   git tag content-v2
-   git push origin main --tags
+   git tag content-v3
+   git push origin content-v3
    ```
-5. _(Opsional)_ **Purge cache jsDelivr** untuk manifest agar pembaruan langsung terbaca:
+5. **Purge cache jsDelivr untuk manifest `@master`** (WAJIB agar versi baru cepat terbaca aplikasi):
    ```
-   https://purge.jsdelivr.net/gh/USERNAME/jihati-content@content-v2/manifest.json
+   https://purge.jsdelivr.net/gh/alhifnywahid/jihati-content@master/manifest.json
    ```
 
-Selesai. Aplikasi akan mendeteksi `contentVersion`/hash baru lalu mengunduh hanya file yang berubah.
+Selesai. Aplikasi membaca `@master/manifest.json`, melihat `contentVersion`/hash baru, lalu mengunduh hanya file yang berubah dari tag `@content-v3`. **Tidak perlu rilis ulang APK ke Play Store.**
 
 ---
 
 ## Konvensi Versi & Rilis
 
+- Aplikasi membaca manifest dari **alamat tetap** `@master/manifest.json` (lihat bagian Akses via CDN).
 - **`contentVersion`** di `manifest.json` dinaikkan setiap publikasi (otomatis oleh `generate_manifest.py`).
-- **Tag git** memakai format `content-vN` (mis. `content-v1`, `content-v2`).
-- `baseUrl` pada manifest harus menunjuk ke tag yang sama dengan rilis tersebut.
+- **Tag git** untuk file konten memakai format `content-vN` (mis. `content-v1`, `content-v2`, `content-v3`).
+- `baseUrl` pada manifest **harus** menunjuk ke tag yang dibuat pada rilis tersebut (`@content-vN/`).
+- Setiap rilis: push ke `main` **dan** push tag `content-vN`, lalu **purge** `@master/manifest.json`.
+
+### Rilis sekali-jalan (`release.ps1`)
+
+Untuk Windows/PowerShell, gunakan skrip pembantu agar tidak perlu mengingat semua langkah:
+
+```powershell
+# Rilis versi 3 (otomatis: regenerasi manifest, commit, push main, tag, push tag, purge)
+./release.ps1 -Version 3 -Message "koreksi harakat Surat Al-Mulk"
+```
+
+Skrip akan menanyakan konfirmasi sebelum melakukan `git push`.
 
 ---
 
 ## Integrasi dengan Aplikasi
 
+- Aplikasi membaca manifest dari **alamat tetap** `@master/manifest.json`, lalu mengunduh file konten dari **tag immutable** yang ditunjuk `baseUrl`.
 - Aplikasi Jihati menerapkan pola **offline-first**:
   1. **Data hasil unduhan terbaru** (tersimpan lokal) → dipakai jika ada.
   2. **Aset bawaan di dalam APK** → cadangan untuk instalasi baru / saat belum pernah online.
 - Internet hanya dibutuhkan **sesaat** untuk mengunduh pembaruan; setelah itu aplikasi berjalan penuh tanpa jaringan.
-- Pembaruan bersifat **data saja** (sesuai kebijakan Google Play yang hanya melarang pembaruan _kode_ di luar Play).
+- Pembaruan bersifat **data saja** (sesuai kebijakan Google Play yang hanya melarang pembaruan _kode_ di luar Play). **Perubahan konten tidak memerlukan rilis ulang aplikasi ke Play Store.**
 
 ---
 
