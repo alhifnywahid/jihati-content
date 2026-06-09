@@ -197,6 +197,23 @@ Selesai. Aplikasi membaca `@master/manifest.json`, melihat `contentVersion`/hash
 
 ---
 
+## Jenis Perubahan yang Didukung
+
+Aplikasi membandingkan `sha256` tiap berkas di manifest dengan yang tersimpan lokal (delta), sehingga semua jenis perubahan tertangani:
+
+| Jenis                              | Cara melakukannya                                                                          | Perilaku aplikasi                                                                                             |
+| ---------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| **Ubah isi** berkas (mis. harakat) | Edit `jihati/<id>.json`, regenerasi manifest.                                              | Hash berubah → **hanya** berkas itu diunduh ulang.                                                            |
+| **Tambah entri baru**              | Buat `jihati/<id>.json` baru + tambahkan entri di `0-daftar-isi.json` (`published: true`). | Berkas baru diunduh; `0-daftar-isi.json` (berubah) ikut diunduh → entri muncul.                               |
+| **Tampilkan/sembunyikan** entri    | Ubah `published` di `0-daftar-isi.json` (tidak perlu hapus file).                          | `0-daftar-isi.json` berubah → diunduh ulang; aplikasi menyaring hanya `published: true`.                      |
+| **Hapus berkas** sepenuhnya        | Hapus `jihati/<id>.json` + hapus entrinya di `0-daftar-isi.json`, regenerasi manifest.     | Berkas hilang dari manifest → aplikasi **menghapus** salinan lokalnya & membersihkan peta hash (tidak usang). |
+
+> **Rekomendasi:** untuk menyembunyikan entri, cukup set `published: false` — lebih aman daripada menghapus berkas. Hapus berkas hanya bila benar-benar tidak dipakai lagi.
+>
+> Pada semua kasus, kumpulan berkas aktif & versi konten selalu konsisten dengan manifest terbaru (atomic). Bila pembaruan gagal di tengah (jaringan putus / berkas korup), data lama tetap utuh.
+
+---
+
 ## Konvensi Versi & Rilis
 
 - Aplikasi membaca manifest dari **alamat tetap** `@master/manifest.json` (lihat bagian Akses via CDN).
