@@ -1,18 +1,18 @@
 {
-  "contentVersion": 1,
-  "generatedAt": "2026-06-09T11:18:48",
-  "baseUrl": "https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v1/",
+  "contentVersion": 2,
+  "generatedAt": "2026-06-09T11:26:54",
+  "baseUrl": "https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v2/",
   "fileCount": 65,
   "files": [
     {
       "path": "jihati/0-daftar-isi.json",
-      "sha256": "2ef4651c44458ed46abefb17f5c7e649a756f58ea1413bb05476d36c570b20d2",
-      "bytes": 7646
+      "sha256": "d1ce2bc64f42ecd983eb4bdb6dde75f137f7719f498bf853e33ed6c543abb4f5",
+      "bytes": 11206
     },
     {
       "path": "jihati/1.json",
-      "sha256": "cb29c2c98c6d4742ea565360cfb64d433a5af8815473d1333ff98f7919467eea",
-      "bytes": 2146
+      "sha256": "10adfb198b030dfcf4b21e5641db015ef70912b4f3cc6e975c710d10cecf39a7",
+      "bytes": 2150
     },
     {
       "path": "jihati/2.json",
@@ -26,18 +26,18 @@
     },
     {
       "path": "jihati/4.json",
-      "sha256": "a565cc353afc65dfd3056c68ec039f3b2215e2baac5bc5ed07c2d75dd669d378",
-      "bytes": 14037
+      "sha256": "73c5df3892cf0309f0e591833658b8fd242edd0247877b3dba27dc093e257c38",
+      "bytes": 13134
     },
     {
       "path": "jihati/5.json",
-      "sha256": "1a0d5df7da80adddc09cda4240007653a33990a0965046e3dc048f6db9204e82",
-      "bytes": 9967
+      "sha256": "ab8d8490e63cd38648ef39a2788d40c989b72f634da7a59b1eacda2d15455fd7",
+      "bytes": 10169
     },
     {
       "path": "jihati/6.json",
-      "sha256": "d17b85b24c44642732b0be720ec62c8ababca6fbe2d8320d18968a622223842f",
-      "bytes": 13590
+      "sha256": "8002b5fc87a1bc88dca3097aac389b052885c725bebbb8e6984c7983f7bc788a",
+      "bytes": 13589
     },
     {
       "path": "jihati/7.json",
@@ -46,8 +46,8 @@
     },
     {
       "path": "jihati/8.json",
-      "sha256": "b2577039dd1bee27979a1805edab8dc726ae7fb3ef0cd74264e737a2fca52fa3",
-      "bytes": 12186
+      "sha256": "0a0eebde4901eea9808e174bcbae5744c7de66243bd8bdc270638c18dc9133a1",
+      "bytes": 12210
     },
     {
       "path": "jihati/9.json",
@@ -56,68 +56,68 @@
     },
     {
       "path": "jihati/10.json",
-      "sha256": "63823153222bfced25dc61da9a210d92bfcfcb69c3138af18cfe326292935f06",
-      "bytes": 4324
+      "sha256": "524e01418f94c225014332e3d618b991dd99f69f13216af9585c160fca82d1cf",
+      "bytes": 4272
     },
     {
       "path": "jihati/11.json",
-      "sha256": "afe857d80c99d3add3b1f3afdb1696efa94767f51e86fa9ad0ab1a141dd6a9b0",
-      "bytes": 2159
+      "sha256": "aa91a5f9c4b69bfbff7806c6c6928c0d93c19e21d20aa599d4935fd6c686d2e1",
+      "bytes": 2548
     },
     {
       "path": "jihati/12.json",
-      "sha256": "c89d295b5337189a05eedc56cd92055a0c8c696a0a97f99f9f2953efef35e6d2",
-      "bytes": 1769
+      "sha256": "a73ead9b5b6ac16199957d901e0cbb8e6ba9557b3c55dcfbeb3d57075d86d074",
+      "bytes": 1843
     },
     {
       "path": "jihati/13.json",
-      "sha256": "7197d5a5bdad1ee9edbf8efc13c9de160d446876a790aef486b98148ac467dbd",
-      "bytes": 3813
+      "sha256": "071698e32a86d64e204d0a94802a27b303a32ddacd8d507cac75629cee8ab96f",
+      "bytes": 3814
     },
     {
       "path": "jihati/14.json",
-      "sha256": "41fecd46d48efce87ffee0c481866c8bced48a678e86769fc9202449a02fa858",
-      "bytes": 893
+      "sha256": "93a44cc74b8646b2d0e441ede16bab9097044ce769e407cce0b70b329074b435",
+      "bytes": 895
     },
     {
       "path": "jihati/15.json",
-      "sha256": "43d16e7868ec115ef70245741e66ba79b1805248d78ca691ac234e30b9126dd4",
-      "bytes": 888
+      "sha256": "603ab9c71a20ee9bbc18739071edcad0651484739caa27e47b4ad562941ad2f1",
+      "bytes": 1226
     },
     {
       "path": "jihati/16.json",
-      "sha256": "e6369fd78f4e810f295925e8b45ce616aaf06d69ab7aac295457113806ce07c3",
-      "bytes": 2673
+      "sha256": "29f5a1385fc8268579ddbe789903839b9e1b20458685dee328f47228f1677f40",
+      "bytes": 2669
     },
     {
       "path": "jihati/17.json",
-      "sha256": "01c592e242244a606f6274f3537f64a4d74db98442a636c82c71a11c34f75a94",
-      "bytes": 1774
+      "sha256": "7a106c5449a6421687a5fdb726f99ac4584783fbb06aca40c341a5e7c603a3df",
+      "bytes": 1782
     },
     {
       "path": "jihati/18.json",
-      "sha256": "f014977e4a9266a0b17d20e380ab5b7e04a536600bf9ef5cd1160666bf6c7a88",
-      "bytes": 1308
+      "sha256": "35c864184376d7b27112015ecda22c7d6ac4c0597679d9f697ea3ecbf4595214",
+      "bytes": 1314
     },
     {
       "path": "jihati/19.json",
-      "sha256": "b6ade943ed41e4a4534e40d087c46226b8a37477806b441fb943bdd0393da119",
+      "sha256": "3f67cb5c6b6266744c83afa61d9f26eda2d72880172a82e9e2d859e0fcb285c1",
       "bytes": 9729
     },
     {
       "path": "jihati/20.json",
-      "sha256": "6249458b7168306fc175f2280d4a4b019e92646592b8d450924b4acee07eac8a",
-      "bytes": 645
+      "sha256": "e7297ab799c5a5f2c55d22d7390374852e3e3b15bd5677b0a8583c73e92794e3",
+      "bytes": 648
     },
     {
       "path": "jihati/21.json",
-      "sha256": "6e12fbeb9f082a8a2f2c29f054483a29b0dbc3f6aaf9d29929dc0b01ac12b719",
-      "bytes": 564
+      "sha256": "a6e6a0de6b7845ca85c89d7f59b00199007526aa1a892a7e72a6144eef1bf35c",
+      "bytes": 626
     },
     {
       "path": "jihati/22.json",
-      "sha256": "eadf5ef720407b433f448ebeeedb5a70c4ff57e244743880a6797832c0625033",
-      "bytes": 1637
+      "sha256": "98be381fb87ee3bc3046dcc1cec9df2b7a80a0479d85b9c53c3445ad7ec0b282",
+      "bytes": 1713
     },
     {
       "path": "jihati/23.json",
@@ -141,8 +141,8 @@
     },
     {
       "path": "jihati/27.json",
-      "sha256": "f210621e623363404f84ac37a7f12c8c8f91b2dffdce4219a6c492582c28070c",
-      "bytes": 5098
+      "sha256": "776c28c38ecd63e9cffe73c7beb709278313d978f4cf5540fa0faf4b61ef0daf",
+      "bytes": 5097
     },
     {
       "path": "jihati/28.json",
@@ -151,23 +151,23 @@
     },
     {
       "path": "jihati/29.json",
-      "sha256": "8acb9a0bc9f64ccdb4a5d61934a359415f566bb5e2fea80b8cef9d4349c776e2",
-      "bytes": 1007
+      "sha256": "4ed1a1fdd9cbde83209cf4e0104b38bf7032996d158ae978fa6e4f3ce3e84498",
+      "bytes": 1015
     },
     {
       "path": "jihati/30.json",
-      "sha256": "e550d8e982b99e70b519712d7670599bd9df4f007ce7b5b73b87855773a8af58",
-      "bytes": 1637
+      "sha256": "ab02d6b8bb531a089de3cb07f68b06c1b9c9cedbbe40e1184dae7c6a2bbe0f6f",
+      "bytes": 1653
     },
     {
       "path": "jihati/31.json",
-      "sha256": "2fbe56a95d7149604fa8347bffb228d0eb27e62d851deb5c9c2c68f8e7db3540",
-      "bytes": 1961
+      "sha256": "336b223408a5d90914aef98903bd7c7a29f779892898b3984f5d782280fad9c2",
+      "bytes": 1956
     },
     {
       "path": "jihati/32.json",
-      "sha256": "653aaff69d2bb916998f7ebafd1fb08144c65d5805bc31ff012bc53015db8817",
-      "bytes": 3671
+      "sha256": "f7000f3abba4f9ae793548e964a8a14a1227029e1f37839b8474d6added769ee",
+      "bytes": 3678
     },
     {
       "path": "jihati/33.json",
@@ -176,8 +176,8 @@
     },
     {
       "path": "jihati/34.json",
-      "sha256": "95f2f4e977d1e3e044ada852aa0014556ebf587c8ec75b2ecedbdd162c65a22f",
-      "bytes": 2784
+      "sha256": "bfa00fe088e20054d3d8a67d7e3afe2f4325984dd8b31e88d2c6e3d6cd1217ca",
+      "bytes": 2796
     },
     {
       "path": "jihati/35.json",
@@ -201,18 +201,18 @@
     },
     {
       "path": "jihati/39.json",
-      "sha256": "811f6d03601eab7e5d0f8c2445f6f5fd70a957b032b9f1a5b10a7f9a2693fa1e",
-      "bytes": 3054
+      "sha256": "dc0fe4ac35dce6fa7b01cf59400924e727085cc7449af528cc241a2607917ed4",
+      "bytes": 3043
     },
     {
       "path": "jihati/40.json",
-      "sha256": "e73519163c17b1abe4baa034453da0894abef1d1cd8e2068b549018cc95665a9",
-      "bytes": 5523
+      "sha256": "9a18693a2892ce3ed89731241015d993296e179a68674917c1bc699aeaf0fe6b",
+      "bytes": 5612
     },
     {
       "path": "jihati/41.json",
-      "sha256": "e59e7d9296e3557207c0d1030b0d8f856788cad3b851f21ded97defad95c7529",
-      "bytes": 1226
+      "sha256": "e782f1d4f6fc1a296301d94b39a7746d4a3c1dc735e30841231e640d53de66d7",
+      "bytes": 1406
     },
     {
       "path": "jihati/42.json",
@@ -221,18 +221,18 @@
     },
     {
       "path": "jihati/43.json",
-      "sha256": "429ffdf6a127ed64c929594c496ca4083d3eb3aad48debb53af57a39470aedea",
-      "bytes": 10157
+      "sha256": "1d296ebf4707e653387ad324bdcb5c7b077be45a1188e9557b132310b3ca5750",
+      "bytes": 11447
     },
     {
       "path": "jihati/44.json",
-      "sha256": "fdeda664781384e30c6f1925946e9ed4d825a2b361fdbdc09d95566d596c6201",
-      "bytes": 10084
+      "sha256": "291b60a4394e9f4ca3e01cddb9297bb0b6a4fc3bb0c6647d062fba8c1b65da4e",
+      "bytes": 10107
     },
     {
       "path": "jihati/45.json",
-      "sha256": "995274b3a5700b7f7c508321e29bce704cce35247ca1b691180cee401286aa1c",
-      "bytes": 36475
+      "sha256": "55c05380b883ab1427c2781a947a1dd83e7499ed4a7f83d868052ad7fb81b867",
+      "bytes": 36536
     },
     {
       "path": "jihati/46.json",
@@ -241,33 +241,33 @@
     },
     {
       "path": "jihati/47.json",
-      "sha256": "ae5e5ee50d604ad778481c79cfc3be4c872f9b88e908e6992dc785fd07ddabd4",
-      "bytes": 2433
+      "sha256": "c7509dc88879ea693a70a7287c6cd3473cbd6768ac21cf42fb66583eced96914",
+      "bytes": 2445
     },
     {
       "path": "jihati/48.json",
-      "sha256": "b9e4e604675694f648a5f5c71380e60f412b01e4796926613643085bd5f905ce",
-      "bytes": 15448
+      "sha256": "80ef54d5281ae409e6bf2322d1323d9be22b0c653d0d59f077436345323df9bb",
+      "bytes": 15356
     },
     {
       "path": "jihati/49.json",
-      "sha256": "06b92ee19c407c735c776db4bbb4d5b51e62960cc7dfc298147612b9b4cc8ba0",
-      "bytes": 10199
+      "sha256": "b51187c8c98dbec2f06a2c2e4904f99eb4fd13109aa74ecd9d7f3cb45d58d794",
+      "bytes": 10142
     },
     {
       "path": "jihati/50.json",
-      "sha256": "037d296adb7f4e1aa4af1753ae302f82848fca346a3fbe625de3ae461ef3ea57",
-      "bytes": 1916
+      "sha256": "268a208708ce5c16bda05cd8030ae4c1ce9aa1b4427d8b69cf08ff41a3945dd5",
+      "bytes": 1918
     },
     {
       "path": "jihati/51.json",
-      "sha256": "7bde5fe292852478835311590123a57f8b915162d5a90abc77044de73fc8a3b8",
-      "bytes": 7272
+      "sha256": "2f4ce9e2b95bfe9b758ca0cb6a51ffaa1282f0a01b46d1e0660cdc29547ee800",
+      "bytes": 7275
     },
     {
       "path": "jihati/52.json",
-      "sha256": "e32e9e90a7bbd8546cc7e80d2b93851865c832eb7667ab3788e4a05c4ba4f208",
-      "bytes": 28167
+      "sha256": "55ff93b7f5601ddc31ea4e9b2feaadc9c48f5ad5fe39331c834202a20423cb99",
+      "bytes": 28156
     },
     {
       "path": "jihati/53.json",
@@ -276,13 +276,13 @@
     },
     {
       "path": "jihati/54.json",
-      "sha256": "aec9af65d334182c93c953ea2c8df8b9dbb925e6a4141035dddd57e0c5ef4b5e",
-      "bytes": 7615
+      "sha256": "f67b21ee990357ef327e0a75c05965c97d93c69d271807a7fa2e6d47fa6d48f0",
+      "bytes": 7613
     },
     {
       "path": "jihati/55.json",
-      "sha256": "449696666afb0b3582211c94d034a47b1b34a0ad6cf79b29254049511840dc3c",
-      "bytes": 1350
+      "sha256": "bd79e2579c092bd482e2e29b797221575256bbc17c5487cd949ae5df4fc359fd",
+      "bytes": 1332
     },
     {
       "path": "jihati/56.json",
@@ -291,13 +291,13 @@
     },
     {
       "path": "jihati/57.json",
-      "sha256": "dadcc56495852f0f7eae9b71eb7031ed10b08d1fa27e46804f51d0930f825520",
-      "bytes": 4831
+      "sha256": "89a2cc6c2d0375a4756d28c3bd3594dd914ac754ee29a710e90127340bcf779d",
+      "bytes": 4828
     },
     {
       "path": "jihati/58.json",
-      "sha256": "76e982ad55950c24392b7d831fbd6c88077faeda81e8297666ebde1a27fad350",
-      "bytes": 2592
+      "sha256": "fa1545c2fc343999f1427aabc667661e30e99d30e1777b0062cba1ef9e1b12df",
+      "bytes": 2586
     },
     {
       "path": "jihati/59.json",
@@ -306,28 +306,28 @@
     },
     {
       "path": "jihati/60.json",
-      "sha256": "0f47d85f4f048fcf6f2682e1ea09ece4a8871c22d50f51ba08742f4e0c6ac0e7",
-      "bytes": 2257
+      "sha256": "c84459b49cb4c1a549eb62e359b59da5caf311188d8cdd756a5764484043e19e",
+      "bytes": 2254
     },
     {
       "path": "jihati/61.json",
-      "sha256": "64ed1b34f4e94ec950784d8c72d170f50f52bdfd222334fc5499f0200435cf1a",
-      "bytes": 4870
+      "sha256": "37510bc109842d2a0ffa82a8c75ef0746a77f23811685a3106d318824fd69993",
+      "bytes": 5510
     },
     {
       "path": "jihati/62.json",
-      "sha256": "7c77d7ec20fe78b011e329ea9ec4bdf09a1cb276260985b108e29a186d3e80e7",
+      "sha256": "d7d9d4f1f8d3b0effcb9ae448fe54310d53bd061b696f361a3ac793df76d1cf3",
       "bytes": 1247
     },
     {
       "path": "jihati/63.json",
-      "sha256": "af56115c184337277a65f8c568eee56e8bf380390942874cb4f3682aa8eddf7e",
-      "bytes": 602
+      "sha256": "f548d964ff73ec699be9bebf1460b31578a495ffb22cfc650ce88a6bf3c42f66",
+      "bytes": 600
     },
     {
       "path": "jihati/64.json",
-      "sha256": "c436e0a82787f4d57c028e9633257393d9040a256a236c8e37e05277797bc662",
-      "bytes": 2149
+      "sha256": "93e766a629df30c95c06dda71857492df615ad9c70cd01af13eb25d287620e65",
+      "bytes": 2152
     }
   ]
 }
