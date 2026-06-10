@@ -1,13 +1,13 @@
 {
-  "contentVersion": 3,
-  "generatedAt": "2026-06-10T14:15:55",
-  "baseUrl": "https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v3/",
-  "fileCount": 66,
+  "contentVersion": 2,
+  "generatedAt": "2026-06-10T14:54:04",
+  "baseUrl": "https://cdn.jsdelivr.net/gh/alhifnywahid/jihati-content@content-v2/",
+  "fileCount": 65,
   "files": [
     {
       "path": "jihati/0-daftar-isi.json",
-      "sha256": "8be01c5e4cf8b791d34c3f0b2b828c80e75518961f9075f2f076f090a24900e1",
-      "bytes": 10855
+      "sha256": "66abb3ff5898406bfc590fc0cb44d281a68c1812078e0eb3b1017455695df2ea",
+      "bytes": 10692
     },
     {
       "path": "jihati/1.json",
@@ -16,8 +16,8 @@
     },
     {
       "path": "jihati/2.json",
-      "sha256": "42d28c0b52a0128ed255acc40cd1f03e4aaf30d0e3dc1ce547d3f2af521ff471",
-      "bytes": 8202
+      "sha256": "7b3ac4a0a1c820a7a85bb19e19328f05fa65efc40106e1f80b8f7f20c1dc3cf6",
+      "bytes": 8264
     },
     {
       "path": "jihati/3.json",
@@ -328,11 +328,6 @@
       "path": "jihati/64.json",
       "sha256": "b2ad58e2c392a00ae78f5631825567d496c65f463a1919b42b304f1d23c288ad",
       "bytes": 2134
-    },
-    {
-      "path": "jihati/65.json",
-      "sha256": "a0e4696672675bef94ddfd3366fa1b430ebf1b87c8c9d4d8f60b63a5a47b8b5c",
-      "bytes": 621
     }
   ]
 }
