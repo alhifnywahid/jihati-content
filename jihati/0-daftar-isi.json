@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "published": true,
+    "published": false,
     "title": {
       "arabic": "سُوْرَةُ الْوَاقِعَةِ",
       "latin": "Surah Al-Waqi'ah"
@@ -185,7 +185,7 @@
   },
   {
     "id": 24,
-    "published": true,
+    "published": false,
     "title": {
       "arabic": "سُوْرَةُ السَّجَدَةِ",
       "latin": "Surat As-Sajdah"
@@ -193,7 +193,7 @@
   },
   {
     "id": 25,
-    "published": true,
+    "published": false,
     "title": {
       "arabic": "سُوْرَةُ الدُّخَانِ",
       "latin": "Surat Ad-Dukhan"
@@ -201,7 +201,7 @@
   },
   {
     "id": 26,
-    "published": true,
+    "published": false,
     "title": {
       "arabic": "سُوْرَةُ الْمُلْكِ",
       "latin": "Surat Al-Mulk"
@@ -209,7 +209,7 @@
   },
   {
     "id": 27,
-    "published": true,
+    "published": false,
     "title": {
       "arabic": "سُوْرَةُ الْجِنِّ",
       "latin": "Surat Al-Jinn"
@@ -409,7 +409,7 @@
   },
   {
     "id": 52,
-    "published": true,
+    "published": false,
     "title": {
       "arabic": "سُوْرَةُ الْكَهْفِ",
       "latin": "Surat Al-Kahf"
@@ -425,7 +425,7 @@
   },
   {
     "id": 54,
-    "published": true,
+    "published": false,
     "title": {
       "arabic": "سُوْرَةُ الرَّحْمٰن",
       "latin": "Surat Ar-Rahman"
