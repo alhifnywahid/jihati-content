@@ -40,11 +40,24 @@ MANIFEST_PATH = os.path.join(ROOT, "manifest.json")
 
 
 def sha256_of(path: str) -> str:
-    h = hashlib.sha256()
+    """SHA-256 atas isi berkas yang DINORMALISASI ke LF.
+
+    git menyimpan & menyajikan berkas teks dengan akhiran baris LF. Di Windows,
+    editor sering menulis CRLF sehingga byte di working tree berbeda dengan yang
+    disajikan CDN. Untuk mencegah hash mismatch, normalisasi CRLF -> LF sebelum
+    hashing agar manifest selalu mencerminkan byte yang benar-benar disajikan.
+    """
     with open(path, "rb") as f:
-        for chunk in iter(lambda: f.read(8192), b""):
-            h.update(chunk)
-    return h.hexdigest()
+        data = f.read()
+    data = data.replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()
+
+
+def normalized_size(path: str) -> int:
+    """Ukuran berkas (byte) setelah normalisasi CRLF -> LF (lihat sha256_of)."""
+    with open(path, "rb") as f:
+        data = f.read()
+    return len(data.replace(b"\r\n", b"\n"))
 
 
 def collect_files() -> list:
@@ -59,7 +72,7 @@ def collect_files() -> list:
         items.append({
             "path": f"{CONTENT_DIR}/{name}",
             "sha256": sha256_of(full),
-            "bytes": os.path.getsize(full),
+            "bytes": normalized_size(full),
         })
     items.sort(key=lambda x: natural_key(x["path"]))
     return items

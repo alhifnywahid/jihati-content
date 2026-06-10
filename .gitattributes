@@ -1,0 +1,5 @@
+# Paksa akhiran baris LF agar konsisten dengan yang disajikan jsDelivr (CDN)
+# dan agar hash pada manifest.json selalu cocok lintas-OS (hindari CRLF Windows).
+*.json text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
